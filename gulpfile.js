@@ -7,8 +7,6 @@ var gulp = require('gulp'),
 		notify = require('gulp-notify'),
 		autoprefixer = require('gulp-autoprefixer'),
 		watch = require('gulp-watch'),
-		imagemin = require('gulp-imagemin'),
-		cache = require('gulp-cache'),
 		connect = require('gulp-connect');
 
 
@@ -47,14 +45,6 @@ gulp.task('styles', function() {
 });
 
 
-gulp.task('images', function() {
-	return gulp.src('img/**/*')
-	.pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-	.pipe(gulp.dest('img/'))
-	.pipe(notify({ message: 'Images task complete' }));
-});
-
-
 gulp.task('watch', function(done) {
 
 	watch('css/*.scss', gulp.parallel(['styles']));
@@ -65,7 +55,7 @@ gulp.task('watch', function(done) {
 });
 
 
-gulp.task('default', gulp.series(['scripts', 'styles', 'images', gulp.parallel('serve', 'watch')],
+gulp.task('default', gulp.series(['scripts', 'styles', gulp.parallel('serve', 'watch')],
 function(done) {
 	done();
 }));
