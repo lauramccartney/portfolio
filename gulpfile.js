@@ -1,6 +1,4 @@
 var gulp = require('gulp'),
-		concat = require('gulp-concat'),
-		uglify = require('gulp-uglify'),
 		rename = require('gulp-rename'),
 		sass = require('gulp-ruby-sass'),
 		minifycss = require('gulp-clean-css'),
@@ -16,19 +14,6 @@ gulp.task('serve', function(done) {
     livereload: true
   })
 	done()
-});
-
-
-gulp.task('scripts', function() {
-    return gulp.src([
-		'js/app.js'
-    ])
-    .pipe(concat('app.js'))
-		.pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/'))
-		.pipe(notify({ message: 'Scripts task complete' }))
-		.pipe(connect.reload());
 });
 
 
@@ -49,13 +34,11 @@ gulp.task('watch', function(done) {
 
 	watch('css/*.scss', gulp.parallel(['styles']));
 
-	watch('js/**/*.js', gulp.parallel(['scripts']));
-
 	done();
 });
 
 
-gulp.task('default', gulp.series(['scripts', 'styles', gulp.parallel('serve', 'watch')],
+gulp.task('default', gulp.series(['styles', gulp.parallel('serve', 'watch')],
 function(done) {
 	done();
 }));
