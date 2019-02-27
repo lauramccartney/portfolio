@@ -1,4 +1,6 @@
-$bg-color: #7db0b2;
+$bg-color: #FA8072;
+$bg-color-dark: #E17366;
+$animation-delay: 2s;
 
 @font-face {
   font-family: "NexaBold";
@@ -16,6 +18,31 @@ $bg-color: #7db0b2;
     url('/Nexa/NexaDemo-Light.woff2') format('woff2'),
     url('/Nexa/NexaDemo-Light.woff') format('woff'),
     url('/Nexa/NexaDemo-Light.ttf') format('truetype');
+}
+
+@keyframes load {
+    0% {
+      background-color: white;
+    }
+
+    100% {
+      background-color: $bg-color;
+    }
+}
+
+@keyframes changeBgColor {
+  0% {
+    background-color: rgba($bg-color, 1);
+  }
+  25% {
+    background-color: rgba($bg-color, 0.8);
+  }
+  75% {
+    background-color: rgba($bg-color-dark, 1);
+  }
+  100% {
+    background-color: rgba($bg-color, 1);
+  }
 }
 
 @import "normalize",

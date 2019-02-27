@@ -20,6 +20,11 @@ main {
 
   background-color: $bg-color;
   z-index: 0;
+
+
+  animation:
+    load $animation-delay ease-in,
+    changeBgColor 20s $animation-delay infinite;
 }
 
 h1, h2, h3 {
