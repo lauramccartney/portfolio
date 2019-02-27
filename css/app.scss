@@ -5,20 +5,20 @@ $breakpoint: 768px;
 
 @font-face {
   font-family: "NexaBold";
-  src: url('/Nexa/NexaDemo-Bold.eot');
-  src: url('/Nexa/NexaDemo-Bold.eot?#iefix') format('embedded-opentype'),
-    url('/Nexa/NexaDemo-Bold.woff2') format('woff2'),
-    url('/Nexa/NexaDemo-Bold.woff') format('woff'),
-    url('/Nexa/NexaDemo-Bold.ttf') format('truetype');
+  src: url('../Nexa/NexaDemo-Bold.eot');
+  src: url('../Nexa/NexaDemo-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../Nexa/NexaDemo-Bold.woff2') format('woff2'),
+    url('../Nexa/NexaDemo-Bold.woff') format('woff'),
+    url('../Nexa/NexaDemo-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: "NexaLight";
-  src: url('/Nexa/NexaDemo-Light.eot');
-  src: url('/Nexa/NexaDemo-Light.eot?#iefix') format('embedded-opentype'),
-    url('/Nexa/NexaDemo-Light.woff2') format('woff2'),
-    url('/Nexa/NexaDemo-Light.woff') format('woff'),
-    url('/Nexa/NexaDemo-Light.ttf') format('truetype');
+  src: url('../Nexa/NexaDemo-Light.eot');
+  src: url('../Nexa/NexaDemo-Light.eot?#iefix') format('embedded-opentype'),
+    url('../Nexa/NexaDemo-Light.woff2') format('woff2'),
+    url('../Nexa/NexaDemo-Light.woff') format('woff'),
+    url('../Nexa/NexaDemo-Light.ttf') format('truetype');
 }
 
 @keyframes load {
