@@ -57,6 +57,11 @@ a {
   }
 }
 
+p {
+  margin-bottom: 2rem;
+  max-width: 1000px;
+}
+
 hr {
   border: none;
   height: 2px;
@@ -76,4 +81,14 @@ ul {
   font-size: 1.4rem;
   line-height: 1.2;
   margin-bottom: .9rem;
+}
+
+.skill-list {
+  li {
+    display: inline-block;
+
+    &::after {
+      content: "/";
+    }
+  }
 }
