@@ -40,8 +40,12 @@ h1, h2, h3 {
   font-weight: 300;
 }
 
-h1, h2, h3, p {
+h1, h2, p {
   margin: 0;
+}
+
+h3 {
+  margin: 0 0 .4em 0;
 }
 
 a {
@@ -59,7 +63,6 @@ a {
 
 p {
   margin-bottom: 2rem;
-  max-width: 1000px;
 }
 
 hr {
@@ -67,11 +70,11 @@ hr {
   height: 2px;
   width: 30px;
   background: white;
-  margin: 1.2em 0;
+  margin: 1.7em 0;
 }
 
 ul {
-  margin-top: 0;
+  margin: 0 0 2em 0;
   list-style: none;
   padding: 0;
 }
@@ -84,6 +87,8 @@ ul {
 }
 
 .skill-list {
+  margin-bottom: 0;
+
   li {
     display: inline-block;
 
