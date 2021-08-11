@@ -339,3 +339,7 @@ li {
 .skill-list li::after {
   content: "/";
 }
+
+.work-list li {
+  margin-bottom: 1.7rem;
+}
