@@ -1,3 +1,46 @@
+@font-face {
+  font-family: "NexaBold";
+  src: url('./Nexa/NexaDemo-Bold.eot');
+  src: url('./Nexa/NexaDemo-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./Nexa/NexaDemo-Bold.woff2') format('woff2'),
+    url('./Nexa/NexaDemo-Bold.woff') format('woff'),
+    url('./Nexa/NexaDemo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "NexaLight";
+  src: url('./Nexa/NexaDemo-Light.eot');
+  src: url('./Nexa/NexaDemo-Light.eot?#iefix') format('embedded-opentype'),
+    url('./Nexa/NexaDemo-Light.woff2') format('woff2'),
+    url('./Nexa/NexaDemo-Light.woff') format('woff'),
+    url('./Nexa/NexaDemo-Light.ttf') format('truetype');
+}
+
+@keyframes load {
+    0% {
+      background-color: white;
+    }
+
+    100% {
+      background-color: #FA8072;
+    }
+}
+
+@keyframes changeBgColor {
+  0% {
+    background-color: rgba(#FA8072, 1);
+  }
+  25% {
+    background-color: rgba(#FA8072, 0.9);
+  }
+  75% {
+    background-color: rgba(#E17366, 1);
+  }
+  100% {
+    background-color: rgba(#FA8072, 1);
+  }
+}
+
 html {
   line-height: 1.15; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -188,4 +231,115 @@ template {
 }
 [hidden] {
   display: none;
+}
+
+
+
+html {
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  line-height: 1.6;
+  padding:  2.5rem 2.8rem;
+  font-family: 'NexaLight', sans-serif;
+  color: white;
+  font-size: 1.9rem;
+}
+
+.bg {
+  position: fixed;
+  top: 1rem;
+  bottom: 1rem;
+  right: 1rem;
+  left: 1rem;
+
+  background-color: #FA8072;
+  z-index: 0;
+
+
+  animation:
+    load 2s ease-in,
+    changeBgColor 20s 2s infinite;
+}
+
+h1, h2, h3 {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+h3 {
+  margin: 0 0 .4em 0;
+}
+
+a {
+  position: relative;
+  color:  white;
+  text-decoration: none;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 4px 2px 4px;
+}
+
+a:hover {
+    background: rgba(255,255,255,0.4);
+    transition: background .25s ease-in-out;
+  }
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  width: 30px;
+  background: white;
+  margin: 1.7em 0;
+}
+
+ul {
+  margin: 0 0 2em 0;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  line-height: 1.3;
+}
+
+.techs {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin: .5rem 0 1.7rem 0;
+}
+
+
+.skill-list {
+  margin-bottom: 0;
+}
+
+.skill-list li {
+  display: inline-block;
+}
+
+.skill-list li::after {
+  content: "/";
+}
+
+.work-list li {
+  margin-bottom: 1.7rem;
 }
